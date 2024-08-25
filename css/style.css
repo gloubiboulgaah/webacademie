@@ -66,6 +66,23 @@ main {
 
 /* TEXTE MACHINA */
 
+.separator {
+    background-color: rgb(172, 172, 172);
+    border-radius: 4px;
+    width: 100%;
+    height: 4px;
+    margin: 7%;
+}
+
+.hyperlink {
+    text-decoration: underline;
+}
+
+.hyperlink:hover {
+    color: black;
+    background-color: rgb(172, 172, 172);
+}
+
 .text-container {
     display: flex;
     flex-direction: column;
@@ -77,6 +94,15 @@ main {
 .text-container img {
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.226);
+}
+
+.para-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2.5%;
 }
 
 .description {
@@ -103,6 +129,17 @@ a {
     /* margin-top: 5%; */
 }
 
+.para-container .title {
+    width: 100%;
+    font-size: 2em;
+    letter-spacing: 0.5vw;
+    font-style: italic;
+}
+
+.injustice {
+    margin: 0;
+}
+
 .subtitle {
     font-size: 2vw;
     letter-spacing: 0.5vw;
@@ -122,6 +159,16 @@ a {
     letter-spacing: 0.2vw;
     margin: 2% 0;
     text-align: justify;
+}
+
+.para-container .text {
+    font-size: 1.2em;
+    letter-spacing: 0.2vw;
+    text-align: justify;
+}
+
+.last {
+    margin-bottom: 0;
 }
 
 h1 {
