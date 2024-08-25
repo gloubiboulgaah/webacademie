@@ -3,7 +3,8 @@ window.addEventListener("load", function () {
     elements.forEach(function (element) {
         element.classList.add("loaded");
     });
-    animateTextByClass("title", 30);
+    animateTextByClass("title", 20);
+    animateTextByClass("description", 10);
 });
 
 document.getElementById("machina").addEventListener("click", function () {
@@ -120,7 +121,7 @@ document.querySelectorAll(".selector").forEach(function (element) {
             subtitleDiv.textContent = "La machine";
             textDiv1 = createText();
             textDiv1.textContent =
-                "Cette machine aurait pour mesure 7 mètres par 7 mètres par 10 mètres. Parmi les choses que pourrait faire la machine, Matthews donne des noms à certaines de ces tortures : « knee nailing », « vital tearing », « fibre ripping », et le « lobster-cracking », qu'il décrit comme une attaque où l'air autour de sa poitrine serait comprimé, l'empêchant alors de respirer. La machine pourrait aussi contrôler l'esprit des gens, lire leurs pensées ou leur en imposer.";
+                "Cette machine aurait pour mesure 7 mètres par 10 mètres par 10 mètres. Parmi les choses que pourrait faire la machine, Matthews donne des noms à certaines de ces tortures : « knee nailing », « vital tearing », « fibre ripping », et le « lobster-cracking », qu'il décrit comme une attaque où l'air autour de sa poitrine serait comprimé, l'empêchant alors de respirer. La machine pourrait aussi contrôler l'esprit des gens, lire leurs pensées ou leur en imposer.";
             imgDiv = createImage();
             imgDiv.src = "../img/light/airloom-controller.jpg";
             descriptionDiv = createDescription();
@@ -138,9 +139,9 @@ document.querySelectorAll(".selector").forEach(function (element) {
             textDiv2 = createText();
             imgDiv = createImage();
             descriptionDiv = createDescription();
-            subtitleDiv.textContent = "Le Airloom's Gang";
+            subtitleDiv.textContent = "Le Air loom's Gang";
             textDiv1.textContent =
-                "Les tyrans de James Tilly Matthews sont décris comme un groupe de jacobins qu'il appelle 'Airloom's gang', qui oeuvre contre Matthews mais aussi contre la paix entre l'Angleterre et la France. Il aurait le contrôle d'une partie du gouvernement grâce à la machine mais aussi une partie de la population.";
+                "Les tyrans de James Tilly Matthews sont décris comme un groupe de jacobins qu'il appelle 'Air loom's gang', qui oeuvre contre Matthews mais aussi contre la paix entre l'Angleterre et la France. Il aurait le contrôle d'une partie du gouvernement grâce à la machine mais aussi une partie de la population.";
             textDiv2.textContent =
                 "Le groupe compte de nombreux membres, dont certains membre eminents que Matthews décrit avec précision. Jack le fendu, Sir Francis, Tommy le fou et leur chef, Bill le roi. Il le décrit comme un tyran brutal et manipulateur, dirigeant les autres membres avec une autorité sans faille. Il serait celui qui prendrait les décisions sur les tortures mentales et physiques infligées à Matthews.";
             imgDiv.src = "../img/light/gang-members.jpg";
@@ -176,9 +177,7 @@ function animateTextByClass(className, changeIterations) {
         let changeCount = 0;
 
         function getRandomChar() {
-            return characters.charAt(
-                Math.floor(Math.random() * characters.length)
-            );
+            return characters.charAt(Math.random() * characters.length);
         }
 
         function animateText() {
@@ -203,14 +202,8 @@ function animateTextByClass(className, changeIterations) {
             } else {
                 changeCount = 0;
             }
-
-            if (revealedText.every(Boolean)) {
-                clearInterval(interval);
-                div.textContent = originalText;
-                div.classList.add("checked");
-            }
         }
 
-        const interval = setInterval(animateText, 1);
+        const interval = setInterval(animateText, 5);
     });
 }
